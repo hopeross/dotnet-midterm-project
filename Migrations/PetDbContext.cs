@@ -8,35 +8,17 @@ public class PetDbContext : DbContext {
     public PetDbContext(DbContextOptions<PetDbContext> options) : base(options) {}
 
     protected override void OnModelCreating(ModelBuilder modelBuilder){
+        base.OnModelCreating(modelBuilder);
 
+        modelBuilder.Entity<Pet>(entity => {
+            entity.HasKey(e => e.PetId);
+            entity.Property(e => e.PetName);
+            entity.Property(e => e.PetURL);
+            entity.Property(e => e.PetDescription);
+            entity.Property(e => e.PetColor);
+            entity.Property(e => e.PetAge);
+            entity.Property(e => e.PetBreed);
+            entity.Property(e => e.PetSize);
+        });
     }
 }
-
-
-
-
-
-
-// using l07_assignment.Models;
-// using Microsoft.EntityFrameworkCore;
-
-// namespace l07_assignment.Migrations;
-
-// public class JobDbContext : DbContext{
-//     public DbSet<Job> Job { get; set; }
-
-//     public JobDbContext(DbContextOptions<JobDbContext> options) : base(options) {}
-
-//     protected override void OnModelCreating(ModelBuilder modelBuilder) {
-//         base.OnModelCreating(modelBuilder);
-
-//         modelBuilder.Entity<Job>(entity =>
-//         {
-//             entity.HasKey(e => e.JobId);
-//             entity.Property(e => e.JobTitle).IsRequired();
-//             entity.Property(e => e.JobDescription).IsRequired();
-//             entity.Property(e => e.CompanyName).IsRequired();
-//             entity.Property(e => e.YearsWorked).IsRequired();
-//         });
-//     }
-// }
