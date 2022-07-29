@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using midterm_project.Models;
 
 namespace midterm_project.Migrations;
+
 public class PetDbContext : DbContext {
     public DbSet<Pet> Pet { get; set; }
 
