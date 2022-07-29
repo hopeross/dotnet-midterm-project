@@ -38,7 +38,8 @@ public class EFPetRepository : IPetRepository
 
     public Pet UpdatePet(Pet newPet)
     {
-        var originalPet = _context.Pet.Find();
+        var originalPet = _context.Pet.Find(newPet.PetId);
+        Console.WriteLine(originalPet.PetId);
         if (originalPet != null)
         {
             originalPet.PetName = newPet.PetName;
@@ -50,6 +51,7 @@ public class EFPetRepository : IPetRepository
             originalPet.PetSize = newPet.PetSize;
         }
 
+        _context.SaveChanges();
         return originalPet;
     }
 }
