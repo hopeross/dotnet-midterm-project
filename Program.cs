@@ -1,5 +1,4 @@
 using midterm_project.Migrations;
-using midterm_project.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
