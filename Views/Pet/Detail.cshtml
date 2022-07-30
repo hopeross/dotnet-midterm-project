@@ -4,22 +4,23 @@
     ViewData["Title"] = "Pet Details";
 }
 
-<div>
+<div class="formContainer">
     <form asp-controller="Pet" asp-action="Detail">
         <h1>Pet Details</h1>
-        <div>
-            <p><img src="@Model.PetURL"></p>
-            <p>@Model.PetName</p>
-            <p>@Model.PetBreed</p>
-            <p>@Model.PetColor, @Model.PetAge</p>
-            <p>@Model.PetDescription</p>
-            <p>@Model.PetSize</p>
-            <input type="hidden" asp-for="PetId" />
-            <div>
-                <input type="submit" class="btn btn-primary float-end" value="Save">
-                <a class="btn btn-light" asp-controller="Pet" asp-action="List">Back</a>
+        <div class="detailContainer">
+            <p ><img src="@Model.PetURL" class="detailImage"></p>
+            <div class="detailDetails">
+                <p class="detailTitle">@Model.PetName</p>
+                <p class="detailText">@Model.PetBreed</p>
+                <p class="detailText">We are a @Model.PetSize sized creature with a @Model.PetColor coat</p>
+                <p class="detailText">Currently we are @Model.PetAge years young</p>
+                <p class="detailText">@Model.PetDescription</p>
             </div>
+            <input type="hidden" asp-for="PetId" />
         </div>
-
+        <div>
+            <input type="submit" class="btn btn-primary float-end" value="Save">
+            <a class="btn btn-light" asp-controller="Pet" asp-action="List">Back</a>
+        </div>
     </form>
 </div>
