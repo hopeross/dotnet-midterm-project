@@ -5,13 +5,21 @@
 }
 
 <div>
-    <form asp-controller="Pet" asp-action="Detail" method="post">
+    <form asp-controller="Pet" asp-action="Detail">
         <h1>Pet Details</h1>
-        @await Html.PartialAsync("_PetInput", Model)
-        <input type="hidden" asp-for="PetId" />
         <div>
-            <input type="submit" class="btn btn-primary float-end" value="Save">
-            <a class="btn btn-light" asp-controller="Pet" asp-action="List">Back</a>
+            <p><img src="@Model.PetURL"></p>
+            <p>@Model.PetName</p>
+            <p>@Model.PetBreed</p>
+            <p>@Model.PetColor, @Model.PetAge</p>
+            <p>@Model.PetDescription</p>
+            <p>@Model.PetSize</p>
+            <input type="hidden" asp-for="PetId" />
+            <div>
+                <input type="submit" class="btn btn-primary float-end" value="Save">
+                <a class="btn btn-light" asp-controller="Pet" asp-action="List">Back</a>
+            </div>
         </div>
+
     </form>
 </div>

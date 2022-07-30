@@ -30,9 +30,21 @@ public class PetController : Controller
         return View(pet);
     }
 
-    [HttpPost]
-    public IActionResult Detail(Pet pet)
+    public IActionResult Edit(int id)
     {
+        var pet = _petRepository.GetPetById(id);
+
+        if (pet == null) {
+            return RedirectToAction("List");
+        }
+
+        return View(pet);
+    }
+
+    [HttpPost]
+    public IActionResult Edit(Pet pet)
+    {
+        Console.WriteLine(pet.PetId);
         if (!ModelState.IsValid)
         {
             return View();
