@@ -16338,6 +16338,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/hope.ross/Desktop/bethel-tech/backend-dotnet/midterm-project/Views/Pet/Edit.cshtml",
+      "TargetPath": "Views\\Pet\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/hope.ross/Desktop/bethel-tech/backend-dotnet/midterm-project/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"

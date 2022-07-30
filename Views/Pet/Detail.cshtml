@@ -4,14 +4,23 @@
     ViewData["Title"] = "Pet Details";
 }
 
-<div>
-    <form asp-controller="Pet" asp-action="Detail" method="post">
+<div class="formContainer">
+    <form asp-controller="Pet" asp-action="Detail">
         <h1>Pet Details</h1>
-        @await Html.PartialAsync("_PetInput", Model)
-        <input type="hidden" asp-for="PetId" />
+        <div class="detailContainer">
+            <p ><img src="@Model.PetURL" class="detailImage"></p>
+            <div class="detailDetails">
+                <p class="detailTitle">@Model.PetName</p>
+                <p class="detailText">@Model.PetBreed</p>
+                <p class="detailText">We are a @Model.PetSize sized creature with a @Model.PetColor coat</p>
+                <p class="detailText">Currently we are @Model.PetAge years young</p>
+                <p class="detailText">@Model.PetDescription</p>
+            </div>
+            <input type="hidden" asp-for="PetId" />
+        </div>
         <div>
-            <input type="submit" class="btn btn-primary float-end" value="Save">
             <a class="btn btn-light" asp-controller="Pet" asp-action="List">Back</a>
+            <a class="btn btn-primary float-end" asp-controller="Pet" asp-action="Edit" asp-route-id="@Model.PetId">Edit</a>
         </div>
     </form>
 </div>

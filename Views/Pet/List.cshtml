@@ -7,28 +7,26 @@
 
 <div>
     <h1>Available Pets</h1>
-    <div><a asp-controller="Pet" asp-action="Add">New Pet</a></div>
-    @* <a class="btn btn-primary mt-3 float-end" asp-controller="Job" asp-action="Add">Create New</a> *@
-    @foreach (var pet in Model ?? new List<Pet>())
-    {
-        <div>
-            <p>useless label here for now</p>
-            <p>@pet.PetName</p>
-            <p>@pet.PetBreed</p>
-            <p>@pet.PetColor, @pet.PetAge</p>
-            <p>@pet.PetDescription</p>
-            <p>@pet.PetSize</p>
-            <a href=@pet.PetURL></a>
-        </div>
-        <div class="col-12">
-            <a class="btn btn-sm btn-secondary mb-3 ml-3 float-end" asp-controller="Pet" asp-action="Delete"
-            asp-route-id="@pet.PetId">
-                Bye Friend!
-            </a>
-            <a class="btn btn-sm btn-light mb-3 float-end" asp-controller="Pet" asp-action="Detail"
-            asp-route-id="@pet.PetId">
-                Update Friend
-            </a>
-        </div>
-    }
+    <div class="soloButton"><a class="btn btn-primary float-end" asp-controller="Pet" asp-action="Add">New Pet</a></div>
 </div>
+
+    <div class="container">
+        @foreach (var pet in Model ?? new List<Pet>())
+        {
+            <div class="myCard">
+                <img class="myCard-image" src="@pet.PetURL">
+                <div class="myCard-body">
+                    <p class="myCard-title">@pet.PetName</p>
+                    <p class="myCard-subtitle">@pet.PetBreed</p>
+                    <div class="myCard-buttons">
+                        <a class="btn btn-primary" asp-controller="Pet" asp-action="Detail" asp-route-id="@pet.PetId">View
+                            Pet</a>
+                        <a class="btn btn-primary" asp-controller="Pet" asp-action="Edit" asp-route-id="@pet.PetId">Edit
+                            Pet</a>
+                        <a class="btn btn-danger" asp-controller="Pet" asp-action="Delete" asp-route-id="@pet.PetId">Delete
+                            Pet</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
