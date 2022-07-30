@@ -19,8 +19,8 @@
             <input type="hidden" asp-for="PetId" />
         </div>
         <div>
-            <input type="submit" class="btn btn-primary float-end" value="Save">
             <a class="btn btn-light" asp-controller="Pet" asp-action="List">Back</a>
+            <a class="btn btn-primary float-end" asp-controller="Pet" asp-action="Edit" asp-route-id="@Model.PetId">Edit</a>
         </div>
     </form>
 </div>
