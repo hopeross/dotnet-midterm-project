@@ -16,3 +16,11 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+div {
+  border: 1px solid hotpink;
+}
+
+p {
+  border: 1px solid cyan;
+}

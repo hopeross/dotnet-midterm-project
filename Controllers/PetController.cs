@@ -33,15 +33,13 @@ public class PetController : Controller
     [HttpPost]
     public IActionResult Detail(Pet pet)
     {
-        Console.WriteLine("Made it Here");
-    
         if (!ModelState.IsValid)
         {
             return View();
         }
 
         _petRepository.UpdatePet(pet);
-        Console.WriteLine(pet.PetId);
+        
         return RedirectToAction("List");
     }
 
