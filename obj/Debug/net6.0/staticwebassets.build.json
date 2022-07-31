@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QkQQO0gSsEm2XE5r8/nlGJ1Acxyf2/ml7FHDZbdB8jM=",
+  "Hash": "jbg7Lf2lluQxThetO+5+fcHI9o4bNiOJ+RXsT6ViMjw=",
   "Source": "midterm-project",
   "BasePath": "_content/midterm-project",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/hope.ross/Desktop/bethel-tech/backend-dotnet/midterm-project/obj/Debug/net6.0/scopedcss/projectbundle/midterm-project.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/hope.ross/Desktop/bethel-tech/backend-dotnet/midterm-project/wwwroot/.DS_Store",
+      "SourceId": "midterm-project",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/hope.ross/Desktop/bethel-tech/backend-dotnet/midterm-project/wwwroot/",
+      "BasePath": "_content/midterm-project",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
       "Identity": "/Users/hope.ross/Desktop/bethel-tech/backend-dotnet/midterm-project/wwwroot/css/site.css",

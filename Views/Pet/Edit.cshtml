@@ -10,8 +10,9 @@
         @await Html.PartialAsync("_PetInput", Model)
         <input type="hidden" asp-for="PetId" />
         <div>
-            <input type="submit" class="btn btn-primary float-end" value="Save">
             <a class="btn btn-light" asp-controller="Pet" asp-action="List">Back</a>
+            <a class="btn btn-danger" asp-cntroller="Pet" asp-action="Delete" asp-route-id="@Model?.PetId">Delete</a>
+            <input type="submit" class="btn btn-primary float-end" value="Save">
         </div>
     </form>
 </div>
